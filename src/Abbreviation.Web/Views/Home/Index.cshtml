@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    ViewBag.Domain = string.Format("{0}://{1}/", Request.Url.Scheme, Request.Url.Authority);
+}
+
+<div class="wrapper">
+    <h1 class="title">Welcome to Use CodeSharp Abbreviation Service</h1>
+    <p>
+        Currently, we provide the following service APIs, and each api will cache the result automatically if the result is not null or empty string.
+        That means if you call the api twice with the same parameters, the result will from the local cache.
+    </p>
+
+    <dl>
+        <dt><strong>@Html.Raw(ViewBag.Domain + "html/abbreviate?url=")</strong></dt>
+        <dd>Get the abbreviated html of a specific url. Remove all the invalid html tags like:
+            script, head, link, style, title, meta, input, select, option, textarea, img, button.
+            And remove all the attributes for all html tags except the href and target attribute of &lt;a&gt; tag.
+            So the result html will only contains the clean html tags and its inner text content.
+        </dd>
+        <dt><strong>@Html.Raw(ViewBag.Domain + "evernote/getdefaultnotes?token=")</strong>
+        <dd>Get all notes of evernote default notebook. The evernote oauth token parameter is required.
+        </dd>
+        <dt><strong>@Html.Raw(ViewBag.Domain + "evernote/getnotecontent?token=noteId=")</strong></dt>
+        <dd>Get the content of a single evernote note. The evernote oauth token and the note id is required.
+        </dd>
+    </dl>
+</div>
+
+

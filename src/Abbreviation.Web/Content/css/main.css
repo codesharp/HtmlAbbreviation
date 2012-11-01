@@ -1,0 +1,27 @@
+﻿body
+{
+    color: #777;
+    font: 14px/20px Arial, Helvetica, sans-serif;
+}
+.wrapper
+{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.title
+{
+    color: #F60;
+}
+dt
+{
+    padding: 0px 60px 0px 20px;
+    line-height: 20px;
+    background: url(../images/tick.png) left center no-repeat;
+    list-style: none;
+}
+dd
+{
+    margin-left:20px;
+    margin-bottom:15px;
+}

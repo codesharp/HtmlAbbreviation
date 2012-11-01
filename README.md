@@ -1,4 +1,4 @@
 HtmlAbbreviation
 ================
 
-This project aims to provide a generic html abbreviation service.
+This project aims to provide a utility html abbreviation service.
